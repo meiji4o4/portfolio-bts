@@ -1,0 +1,65 @@
+header{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(255, 205, 158);
+    position: sticky;
+    top: 0;
+    border-radius: 30px;
+}
+footer{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(255, 230, 206);
+    border-radius: 30px;
+}
+
+#onglets {
+    border-radius: 10px;
+    background-color: rgba(235, 233, 156, 0.618);
+}
+
+
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#infoSup {
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
+
+#aPropos {
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
+
+.desc{
+    border-radius: 10px;
+    background-color: rgba(53, 194, 254, 0.892);
+
+}
+
+#projets{
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+    
+}
+
+#competences{
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
+
+#stages{
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
+
+#veille{
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
+
+#contact{
+    border-radius: 20px;
+    background-color: rgba(182, 225, 243, 0.892);
+}
