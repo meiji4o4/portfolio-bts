@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio test</title>
-    <link rel="stylesheet" href="base.css"></link>
+    <link rel="stylesheet" href="style/base.css">
 </head>
 <body>
     <header>
@@ -30,8 +28,8 @@
 
     <main>
         <section id="Accueil">
-            <H1>Edouard MAMARIL - BTS Services Informatiques aux Organisations</H1>
-            <H2>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</H2>
+            <h1>Edouard MAMARIL - BTS Services Informatiques aux Organisations</h1>
+            <h2>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h2>
 
         
 
@@ -95,20 +93,61 @@
         <section id="stages">
             <p>
                 STAGES
-                <div id="exp1"></div>
+                </p><div id="exp1"></div>
                 <div id="exp2"></div>
                
-            </p>
+            <p></p>
         </section>
 
         <section id="veille">
-            <p>
-                VEILLE
-                <br>
-                <div id="veille">
-                    <p>Retrouvez ici les dernières actualités et innovations dans le domaine de l'IaC (Infrastructure as code)</p>
+            <h2>Veille technologique</h2>
+            <div id="explic_veille">
+                <div class="desc_veille">
+                    <h3>Qu'est-ce que la veille technologique</h3>
+                    <p>La veille technologique consiste à surveiller de manière systématique et régulière les évolutions, nouveautés et bonnes pratiques dans le domaine de l’informatique. Pour un futur technicien SISR, elle est essentielle : elle permet d’anticiper les changements (nouvelles versions d’outils, failles de sécurité, tendances comme l’IaC ou le cloud), de rester compétent sur le marché du travail et d’alimenter sa réflexion professionnelle. Une bonne veille ne se limite pas à collecter des informations : elle implique de les sélectionner, les analyser et les confronter à sa propre pratique.</p>
                 </div>
-            </p>
+                <div class="desc_veille">
+                    <h3>Ma démarche pour m'informer</h3>
+                    <p>Je structure ma veille autour de deux sources principales complémentaires : 
+                        </p><ul>
+                            <li>Un agrégateur de flux RSS personnalisé : j’utilise Inoreader (version gratuite) pour centraliser les articles de blogs techniques et médias spécialisés. Je suis notamment les flux officiels de HashiCorp (Terraform), de Red Hat (Ansible), ainsi que des sites comme The New Stack ou Le Monde Informatique (thèmes Cloud et Virtualisation). Chaque semaine, je parcours les titres et sauvegarde les articles les plus pertinents.</li>
+
+                            <li>Les communautés Reddit : je consulte régulièrement les subreddits r/sysadmin (anglophone) et r/sysadmin_fr (francophone). Ces forums d’échange entre administrateurs systèmes et réseaux me permettent de découvrir des retours d’expérience concrets, des astuces, des alertes sur des vulnérabilités ou des outils émergents, bien plus rapidement que dans les médias traditionnels.</li>
+                        </ul>
+                    <p></p>
+                </div>
+                <div class="desc_veille">
+                    <h3>L'IaC (Infrastructure as code)</h3>
+                    <p>
+                        L’Infrastructure as Code (IaC) est une pratique qui consiste à décrire et gérer l’infrastructure informatique (serveurs, réseaux, bases de données, pare‑feux…) à l’aide de fichiers de configuration manipulables comme du code source. Au lieu d’effectuer des actions manuelles, on écrit des scripts qui automatisent la création, la modification et la suppression des ressources.
+
+                        Pourquoi ce sujet me correspond‑il particulièrement ?
+                        Personnellement, j’apprécie autant le développement et les algorithmes que l’administration des systèmes et réseaux. L’IaC se situe exactement à l’intersection des deux :
+
+                        </p><ul>
+                        <li>
+                        Elle demande une rigueur de développeur : écrire du code propre, structuré, versionné (avec Git), et parfois concevoir de petites logiques algorithmiques (boucles, conditions, variables) dans les templates Terraform ou les playbooks Ansible.
+                        </li>
+                        <li>
+                        Elle s’applique directement aux métiers de l'administration systèmes et réseaux : déployer des VM, configurer des pare‑feux, gérer des clusters, assurer la reproductibilité des infrastructures etc.
+                        </li>
+                        </ul>
+
+                        Ainsi, l’IaC me permet de concilier mes deux centres d’intérêt : coder pour administrer, et administrer en codant. C’est aussi une compétence très recherchée sur le marché du travail, car elle accélère les déploiements, réduit les erreurs manuelles et facilite le travail collaboratif.
+
+                        Outils phares : je commence à explorer Terraform (provisionnement multi‑cloud) et Ansible (configuration système). Ma veille RSS et les échanges sur Reddit m’aident à suivre leurs évolutions et à découvrir des cas concrets d’utilisation en entreprise.
+                        
+                    <p></p>
+                </div>
+            </div>
+
+            <div id="articles">
+                <p>Retrouvez ici les dernières actualités notables dans le domaine de l'IaC</p>
+                <div id="filtre">
+                
+                </div>
+
+            </div>
         </section>
 
         <section id="contact">
@@ -129,5 +168,5 @@
         (mettre un footer)
     </footer>
     
-</body>
-</html>
+
+</body></html>

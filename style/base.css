@@ -1,3 +1,5 @@
+
+
 header{
     font-family: Helvetica, Arial, sans-serif;
     background-color: rgb(255, 205, 158);
@@ -39,25 +41,37 @@ body{
 #projets{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
-    
+    scroll-margin-top: 170px;
 }
 
 #competences{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
+    scroll-margin-top: 170px;
 }
 
 #stages{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
+    scroll-margin-top: 170px;
 }
 
 #veille{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
+    scroll-margin-top: 170px;
+
 }
+
+.desc_veille{
+    border-radius: 10px;
+    background-color: rgba(150, 53, 254, 0.892);
+}
+
 
 #contact{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
+    scroll-margin-top: 170px;
 }
+
