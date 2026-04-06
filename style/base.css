@@ -1,71 +1,145 @@
+@font-face {
+    font-family: lato;
+    src: url(fonts/lato/Lato-Hairline.ttf);
 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.button{
+    color: white;
+    font-family: lato-hairline;
+    src: url(fonts/lato/Lato-Hairline.ttf);
+    background-color: rgba(0, 183, 255, 0.182);
+    border :none;
+    padding: 0.5rem 1rem;  
+    border-radius : 4px;
+    cursor : pointer;
+    margin: 1rem;
+}
+
+.button:hover{
+    background:#555;
+}
+
+@font-face {
+    font-family: lato-hairline;
+    src: url(fonts/lato/Lato-Hairline.ttf)
+}
+
+html{
+    font-family: "lato";
+    color: white;
+    background-color: black;
+
+}
 
 header{
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(255, 205, 158);
     position: sticky;
     top: 0;
-    border-radius: 30px;
+    background-color: rgba(0, 183, 255, 0.182);
+    display: flex;
+    border-radius: 10px;
 }
+
+#onglets{
+    right: 0;
+}
+
+header ul >li{
+    display:inline-flex;
+}
+
 footer{
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(255, 230, 206);
+    
     border-radius: 30px;
 }
 
+
+
+.video_section{
+    position:relative;
+}
+
+.bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+#accueil{
+    position: relative;
+    min-height: 100vh;   /* pour que la section prenne au moins toute la hauteur de l’écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #onglets {
     border-radius: 10px;
-    background-color: rgba(235, 233, 156, 0.618);
 }
 
-body{
-    font-family: Helvetica, Arial, sans-serif;
+#accueil{
+    background-image: url();
 }
+
+
 
 #infoSup {
-    border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
+    border-radius: 10px;
+    background-color: rgba(0, 183, 255, 0.182);
+    display: flex;
+
 }
 
 #aPropos {
     border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
+    
 }
 
 .desc{
     border-radius: 10px;
-    background-color: rgba(53, 194, 254, 0.892);
+
 
 }
 
 #projets{
     border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
+
     scroll-margin-top: 170px;
 }
 
 #competences{
     border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
     scroll-margin-top: 170px;
 }
 
 #stages{
     border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
     scroll-margin-top: 170px;
 }
 
 #veille{
     border-radius: 20px;
-    background-color: rgba(182, 225, 243, 0.892);
+    background-color: rgba(182, 225, 243, 0.137);
     scroll-margin-top: 170px;
 
 }
 
 .desc_veille{
     border-radius: 10px;
-    background-color: rgba(150, 53, 254, 0.892);
+    background-color: rgba(254, 53, 53, 0.429);
 }
 
 

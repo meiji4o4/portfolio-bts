@@ -13,13 +13,13 @@
         
         <nav id="onglets">
             <ul>
-                <li><a href="https://portfolio.edouard-mamaril.workers.dev">Accueil</a></li>
-                <li><a href="#aPropos">À propos</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#stages">Stages</a></li>
-                <li><a href="#veille">Veille informatique</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a class="button" href="https://portfolio.edouard-mamaril.workers.dev" value="Accueil"> Accueil</a></li>
+                <li><a class="button" href="#aPropos">À propos</a></li>
+                <li><a class="button" href="#projets">Projets</a></li>
+                <li><a class="button" href="#competences">Compétences</a></li>
+                <li><a class="button" href="#stages">Stages</a></li>
+                <li><a class="button" href="#veille">Veille informatique</a></li>
+                <li><a class="button" href="#contact">Contact</a></li>
 
             </ul>
         </nav>
@@ -27,48 +27,52 @@
     </header>
 
     <main>
-        <section id="Accueil">
-            <h1>Edouard MAMARIL - BTS Services Informatiques aux Organisations</h1>
-            <h2>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h2>
+        <div class="video_section">
+            <video class="bg_video" autoplay loop muted plays-inline>
+                <source src="images/mp4/mixkit-bluish-data-center-hallway-23282-hd-ready.mp4" type="video/mp4">
+            </video>
+            <section id="accueil">
+                <h1>Edouard MAMARIL - BTS Services Informatiques aux Organisations</h1>
+                <h2>Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h2>
 
-        
 
-            <div id="infoSup">
-                <p id="localisation">Localisation : Goussainville (95)</p>
-                <a href="/PORTFOLIO/cv.pdf">Télécharger mon CV</a>
-                <a href="https://github.com/meiji4o4/">Github</a>
-                <a href="https://www.linkedin.com/in/edouard-m-375b613b0">LinkedIn</a>
+                <div id="infoSup">
+                    <p id="localisation">Localisation : Goussainville (95)</p>
+                    <a class="button" href="/PORTFOLIO/cv.pdf">Télécharger mon CV</a>
+                    <a class="button" href="https://github.com/meiji4o4/">Github</a>
+                    <a class="button" href="https://www.linkedin.com/in/edouard-m-375b613b0">LinkedIn</a>
+                
+                </div>
             
-            </div>
             
-            
-        </section>
+            </section>
 
-        <section id="aPropos">
-            <h2>À propos</h2>
-            <p>Edouard MAMARIL, étudiant en 1ère année BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée Voillaume à Aulnay-sous-Bois. Fortement intéressé par l'infrastructure réseau et système, au même titre que la programmation, je me passionne pour l'Infrastructure As Code (automatisation des infrastructures par le code) et les méthodes DevOps </p>
-                    <div id="descBTS">
-                        <h2>Qu'est-ce que le BTS SIO ?</h2>
-                        <p>
-                            Le BTS SIO (Services Informatiques aux Organisation) est une formation en 2 ans, destinée à ceux qui souhaitent avant tout devenir techniciens informatique, que ce soit dans l'infrastructure système et réseau, ou bien dans le développement. Deux options sont alors proposés : SLAM ou SISR.
-                        </p>
-                        <ul>
-                            <li class="desc">Option SLAM
-                                <p>
-                                    L’option SLAM est orientée vers le développement et la gestion d’applications. Les étudiants apprennent à concevoir, réaliser et maintenir des programmes informatiques, que ce soit des applications de bureau, web ou mobiles. Au programme : langages de programmation (HTML/CSS, PHP, C#, etc.), bases de données, gestion de projets, et conception d'interfaces utilisateur. Les diplômés SLAM peuvent devenir développeurs, analystes programmeurs, ou encore techniciens d’applications.
-                                </p>
-                            </li>
-
-                        <li class="desc">Option SISR
+            <section id="aPropos">
+                <h2>À propos</h2>
+                <p>Edouard MAMARIL, étudiant en 1ère année BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée Voillaume à Aulnay-sous-Bois. Fortement intéressé par l'infrastructure réseau et système, au même titre que la programmation, je me passionne pour l'Infrastructure As Code (automatisation des infrastructures par le code) et les méthodes DevOps </p>
+                        <div id="descBTS">
+                            <h2>Qu'est-ce que le BTS SIO ?</h2>
                             <p>
-                                L’option SISR se concentre sur l’administration des infrastructures réseau et systèmes. Les étudiants acquièrent des compétences pour installer, configurer et sécuriser des serveurs, des équipements réseau (routeurs, switchs), ainsi que pour gérer les systèmes d’exploitation (Windows, Linux). Ils apprennent aussi à superviser le réseau, à mettre en place des solutions de virtualisation et à assurer la cybersécurité. Les débouchés incluent les postes d’administrateur réseau, technicien systèmes et réseaux, ou encore support informatique.
+                                Le BTS SIO (Services Informatiques aux Organisation) est une formation en 2 ans, destinée à ceux qui souhaitent avant tout devenir techniciens informatique, que ce soit dans l'infrastructure système et réseau, ou bien dans le développement. Deux options sont alors proposés : SLAM ou SISR.
                             </p>
+                            <ul>
+                                <li class="desc">Option SLAM
+                                    <p>
+                                        L’option SLAM est orientée vers le développement et la gestion d’applications. Les étudiants apprennent à concevoir, réaliser et maintenir des programmes informatiques, que ce soit des applications de bureau, web ou mobiles. Au programme : langages de programmation (HTML/CSS, PHP, C#, etc.), bases de données, gestion de projets, et conception d'interfaces utilisateur. Les diplômés SLAM peuvent devenir développeurs, analystes programmeurs, ou encore techniciens d’applications.
+                                    </p>
+                                </li>
 
-                        </li>
-                    </ul>
-                    </div>
-        
-        </section>
+                            <li class="desc">Option SISR
+                                <p>
+                                    L’option SISR se concentre sur l’administration des infrastructures réseau et systèmes. Les étudiants acquièrent des compétences pour installer, configurer et sécuriser des serveurs, des équipements réseau (routeurs, switchs), ainsi que pour gérer les systèmes d’exploitation (Windows, Linux). Ils apprennent aussi à superviser le réseau, à mettre en place des solutions de virtualisation et à assurer la cybersécurité. Les débouchés incluent les postes d’administrateur réseau, technicien systèmes et réseaux, ou encore support informatique.
+                                </p>
+
+                            </li>
+                        </ul>
+                        </div>
+            
+            </section>
+        </div>
 
 
 
