@@ -13,6 +13,11 @@ section {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .button{
     color: white;
     font-family: lato-hairline;
@@ -42,11 +47,13 @@ html{
 }
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: rgba(0, 183, 255, 0.182);
+    width: 100%;
+    background-color: rgba(57, 116, 205, 0.481);
     display: flex;
     border-radius: 10px;
+    z-index: 1000;
 }
 
 #onglets{
@@ -66,6 +73,8 @@ footer{
 
 .video_section{
     position:relative;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .bg_video {
@@ -85,13 +94,10 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    scroll-margin-top: 0;
 }
 #onglets {
     border-radius: 10px;
-}
-
-#accueil{
-    background-image: url();
 }
 
 
@@ -105,6 +111,7 @@ footer{
 
 #aPropos {
     border-radius: 20px;
+    scroll-margin-top: 0;
     
 }
 
