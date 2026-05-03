@@ -148,21 +148,29 @@
             <div id="articles">
                 <p>Retrouvez ici les dernières actualités notables dans le domaine de l'IaC</p>
                 <div id="filtre">
-			<form method="POST">
-				<input class="srchbar" type="search">
-				<input type="button" class="btn_article" value="Rechercher">
-				<select class="filter">
-					<option value="Date"> Date</option>
-					<option value="Plus populaire"> Date</option>
-					<option value="Plus récent"> Date</option>
-					<option value=""> Date</option>
-				</select>
-			</form>
+                <form>
+                    <input id = srchbar class="srchbar" type="search">
+                    <select id = filter1 class="filter">
+                        
+                        <option value="date">Date</option>
+                        <option value="ordre alphabétique">Ordre alphabétique</option>
+                    </select>
+                    <select id = filter2 class="filter">
+                        
+                        <option value="croissant">Les plus récents</option>
+                        <option value="decroissant">Les plus anciens</option>
+                    </select>
                     
-         -
-                </div>
+                </form>
+                <button id = "btn_article" class="btn_article">Rechercher</button>
 
+                <div id = "art_container"> 
+                    
+                
+                </div>
+            
             </div>
+            
         </section>
 
         <section id="contact">
@@ -183,5 +191,6 @@
         (mettre un footer)
     </footer>
     
+    <script src="js/script.js"></script>
 
 </body></html>
