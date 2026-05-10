@@ -81,7 +81,8 @@ body {
 }
 
 html{
-    font-family: "Lato-Light";
+    font-family: "Lato-Medium";
+    font-size: 100%;
     color: white;
     background-color: black;
 
