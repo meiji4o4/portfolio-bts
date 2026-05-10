@@ -1,16 +1,22 @@
 @font-face {
-    font-family: lato;
-    src: url(fonts/lato/Lato-Hairline.ttf);
-
+    font-family: "lato-black";
+    src: url(fonts/lato/Lato-Black.ttf)
 }
 
 a{
     text-decoration: none;
     color: white;
 }
+@keyframes couleursDyna{
+    0% {background-color: rgba(176, 170, 255, 0.958);}
+    50% {background-color: rgb(103, 92, 251);}
+    100% {background-color: rgba(176, 170, 255, 0.958);}
+}
 
 section {
-    background-color: rgba(0, 0, 0, 0.6);
+    animation-name: none;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 body {
@@ -18,29 +24,40 @@ body {
     padding: 0;
 }
 
+
 .button{
     color: white;
-    font-family: lato-hairline;
-    src: url(fonts/lato/Lato-Hairline.ttf);
-    background-color: rgba(0, 183, 255, 0.182);
+    font-family: "lato-black";
     border :none;
     padding: 0.5rem 1rem;  
     border-radius : 4px;
     cursor : pointer;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
+@keyframes boutonDyna {
+    100% {background-color: #555};
+    100%{animation-play-state: paused};
+}
 .button:hover{
-    background:#555;
+    animation-name: boutonDyna;
+    animation-timing-function: cubic-bezier();
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+
+}
+#onglets{
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
-@font-face {
-    font-family: lato-hairline;
-    src: url(fonts/lato/Lato-Hairline.ttf)
+#descMe{
+    margin: 4rem;
 }
 
 html{
-    font-family: "lato";
+    font-family: "lato-black";
     color: white;
     background-color: black;
 
@@ -50,14 +67,18 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(57, 116, 205, 0.481);
+    background-color: #404040bb;
     display: flex;
-    border-radius: 10px;
+    border-bottom-left-radius: 13px ;
+    border-bottom-right-radius: 13px;
     z-index: 1000;
+    backdrop-filter: blur(20px);
+    
 }
 
 #onglets{
     right: 0;
+    max-height: 5rem;
 }
 
 header ul >li{
@@ -94,8 +115,13 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    
     scroll-margin-top: 0;
 }
+
+
+
 #onglets {
     border-radius: 10px;
 }
@@ -106,18 +132,28 @@ footer{
     border-radius: 10px;
     background-color: rgba(0, 183, 255, 0.182);
     display: flex;
+    align-items: center;
 
 }
 
 #aPropos {
     border-radius: 20px;
     scroll-margin-top: 0;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
     
 }
 
 .desc{
     border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -125,16 +161,37 @@ footer{
     border-radius: 20px;
 
     scroll-margin-top: 170px;
+
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #competences{
     border-radius: 20px;
     scroll-margin-top: 170px;
+
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #stages{
     border-radius: 20px;
     scroll-margin-top: 170px;
+
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #veille{
@@ -142,11 +199,19 @@ footer{
     background-color: rgba(182, 225, 243, 0.137);
     scroll-margin-top: 170px;
 
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
 }
 
 .desc_veille{
     border-radius: 10px;
     background-color: rgba(254, 53, 53, 0.429);
+
 }
 
 
@@ -154,5 +219,10 @@ footer{
     border-radius: 20px;
     background-color: rgba(182, 225, 243, 0.892);
     scroll-margin-top: 170px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 

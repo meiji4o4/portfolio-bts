@@ -2,7 +2,10 @@ srchbar = document.getElementById('srchbar');
 filter1 = document.getElementById('filter1');
 filter2 = document.getElementById('filter2');
 btn_article = document.getElementById('btn_article');
-art_container = document.getElementById('art_container'); 
+art_container = document.getElementById('art_container');
+
+let vid = document.getElementById("home_video");
+vid.playbackRate = 1.25;
 
 filter1.addEventListener('change', () => {
     if (filter1.selectedIndex === 0){
