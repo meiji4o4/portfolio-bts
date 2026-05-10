@@ -130,9 +130,14 @@ footer{
 
 #infoSup {
     border-radius: 10px;
+    background-color: rgba(82, 196, 249, 0.15);
+
+    /*
     background-color: rgba(0, 183, 255, 0.182);
+    */
     display: flex;
     align-items: center;
+    backdrop-filter: blur (20px);
 
 }
 
