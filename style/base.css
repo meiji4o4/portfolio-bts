@@ -1,5 +1,14 @@
 @font-face {
-    font-family: "lato-black";
+    font-family: "Lato-Light";
+    src: url(fonts/lato/Lato-Light.ttf)
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url(fonts/lato/Lato-Medium.ttf)
+}
+@font-face {
+    font-family: "Lato-Black";
     src: url(fonts/lato/Lato-Black.ttf)
 }
 
@@ -19,6 +28,12 @@ section {
     animation-iteration-count: infinite;
 }
 
+.background_dyna{
+    animation-name: couleursDyna;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -27,7 +42,7 @@ body {
 
 .button{
     color: white;
-    font-family: "lato-black";
+    font-family: "Lato-Medium";
     border :none;
     padding: 0.5rem 1rem;  
     border-radius : 4px;
@@ -36,7 +51,7 @@ body {
 }
 
 @keyframes boutonDyna {
-    100% {background-color: #555};
+    100% {background-color: rgba(143, 143, 143, 0.534)};
     100%{animation-play-state: paused};
 }
 .button:hover{
@@ -56,8 +71,17 @@ body {
     margin: 4rem;
 }
 
+.blur_div{
+    border-radius: 15px;
+    padding : 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.110);
+    backdrop-filter: blur(15px);
+
+
+}
+
 html{
-    font-family: "lato-black";
+    font-family: "Lato-Light";
     color: white;
     background-color: black;
 
@@ -67,12 +91,12 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #404040bb;
+    background-color:rgba(255, 255, 255, 0.155);
     display: flex;
     border-bottom-left-radius: 13px ;
     border-bottom-right-radius: 13px;
     z-index: 1000;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
     
 }
 
@@ -130,7 +154,7 @@ footer{
 
 #infoSup {
     border-radius: 10px;
-    background-color: rgba(82, 196, 249, 0.15);
+    background-color: rgba(82, 196, 249, 0.150);
 
     /*
     background-color: rgba(0, 183, 255, 0.182);

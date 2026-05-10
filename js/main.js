@@ -4,9 +4,6 @@ filter2 = document.getElementById('filter2');
 btn_article = document.getElementById('btn_article');
 art_container = document.getElementById('art_container');
 
-let vid = document.getElementById("home_video");
-vid.playbackRate = 1.25;
-
 filter1.addEventListener('change', () => {
     if (filter1.selectedIndex === 0){
         filter2.options[0].textContent = "Les plus récents";
