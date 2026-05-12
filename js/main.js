@@ -81,5 +81,18 @@ btn_article.addEventListener ('click', () => {
 });
 
 
+// --- GSAP ScrollTrigger : assombrissement progressif de la vidéo ---
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".video_overlay", {
+    backgroundColor: "rgba(28,30,35,1)", // couleur moyenne de ton animation
+    ease: "power4.in",
+    scrollTrigger: {
+        trigger: ".video_section",
+        start: "70% top",
+        end: "bottom top",
+        scrub: 0.8
+    }
+});
 
 

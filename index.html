@@ -28,9 +28,12 @@
     <main>
 
         <div class="video_section">
-            <video id="home_video" class="bg_video" autoplay loop muted plays-inline>
+            <video id="home_video" class="bg_video" autoplay loop muted playsinline>
                 <source src="media/videos/visuel_portfolio.mp4" type="video/mp4">
             </video>
+
+            <div class="video_overlay"></div>
+            
            
         
 
@@ -40,7 +43,7 @@
 
                 <div id="infoSup">
                     <p id="localisation">Localisation : Goussainville (95)</p>
-                    <a class="button" href="/PORTFOLIO/other/CV MAMARIL.pdf">Télécharger mon CV</a>
+                    <a class="button" href="/PORTFOLIO/other/CV_MAMARIL.pdf">Télécharger mon CV</a>
                     <a class="button" href="https://github.com/meiji4o4/">Github</a>
                     <a class="button" href="https://www.linkedin.com/in/edouard-m-375b613b0">LinkedIn</a>
                 
@@ -52,12 +55,12 @@
             
             </section>
 
-            <section id="aPropos" >
+            <section id="aPropos"  >
                 <div id="descMe" class="blur_div">
-                    <h2 <--style='font-family: "Lato-Light";'>À propos</h2>
+                    <h2>À propos</h2>
                     <p>Edouard MAMARIL, étudiant en 1ère année BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée Voillaume à Aulnay-sous-Bois. Fortement intéressé par l'infrastructure réseau et système, au même titre que la programmation, je me passionne pour l'Infrastructure As Code (automatisation des infrastructures par le code) et les méthodes DevOps </p>
                 </div>
-            
+                
                     <div id="descBTS" class="blur_div" >
                         <h2>"BTS SIO", qu'est-ce que c'est ?</h2>
                         <p >Le BTS SIO (Services Informatiques aux Organisation) est une formation en 2 ans, destinée à ceux qui souhaitent avant tout devenir techniciens informatique, que ce soit dans l'infrastructure système et réseau, ou bien dans le développement. Deux options sont alors proposés : SLAM ou SISR.
@@ -77,20 +80,32 @@
                     </div>
             
             </section> 
+            <div class="spacer"></div>
         </div>
-<div <--class="background_dyna">
+        
+        
+
+
+        <div id="other_section">
+            <div class="other_overlay"></div>
         <section id="projets" >
+            <h2>PROJETS</h2>
             <p>
-                PROJETS
-                <br>
-                TEST LONGUEUR
-                <br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|
-            </p>
+                <div class="wrapper">
+                    <div class="box">Un</div>
+                    <div class="box">Un</div>
+                    <div class="box">Un</div>
+                    <div class="box">Un</div>
+                    <div class="box">Un</div>
+                    <div class="box">Un</div>
+                    
+                </div>            
         </section>
 
         <section id="competences">
+            <h2>COMPÉTENCES</h2>
+            
             <p>
-                <p style="font-size: 2rem;">COMPÉTENCES</p>
                 <br>
                 TEST LONGUEUR
                 <br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|
@@ -98,22 +113,21 @@
         </section>
 
         <section id="stages">
-            <p>
-                <p style="font-size: 2rem;">STAGES</p>
-                </p>
-                <div id="exp1">
-                    <p>JUIN 2026 -- À venir</p>
-                    <p>S&G Beuzelin -- Goussainville (95)</p>
-                    <p>Technicien support, systèmes et réseaux</p>
+            
+            <h2>STAGES</h2>
+            <div id="exp1">
+                <p>JUIN 2026 -- À venir</p>
+                <p>S&G Beuzelin -- Goussainville (95)</p>
+                <p>Technicien support, systèmes et réseaux</p>
 
-                </div>
-                <div id="exp2"></div>
+            </div>
+            <div id="exp2"></div>
                
             <p></p>
         </section>
 
         <section id="veille">
-            <p style="font-size: 2rem;">VEILLE INFORMATIQUE</p>
+            <h2>VEILLE INFORMATIQUE</h2>
             <div id="explic_veille">
                 <div class="desc_veille">
                     <h3>Qu'est-ce que la veille informatique</h3>
@@ -171,7 +185,7 @@
                     </select>
                     
                 </form>
-                <button id = "btn_article" class="btn_article">Rechercher</button>
+                <button id = "btn_article" class="button">Rechercher</button>
 
                 <div id = "art_container"> 
                     
@@ -183,8 +197,8 @@
         </section>
 
         <section id="contact">
+            <h2>CONTACT</h2>
             <p>
-                CONTACT
                 <br>
                 TEST LONGUEUR
                 <br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br>
@@ -200,6 +214,16 @@
         (mettre un footer)
     </footer>
     
-    <script src="js/main.js"></script>
+    
+    
 
-</body></html>
+</body>
+
+<script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script>
+
+<script src="js/main.js"></script>
+
+
+
+</html>
