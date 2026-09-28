@@ -321,7 +321,13 @@ footer{
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   min-height: 5rem;
   min-width: 5rem;
+  
 
+}
+
+.box:hover{
+    background: rgb(113, 113, 113);
+    cursor: pointer;
 }
 
 .box1 {
