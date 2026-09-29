@@ -1,280 +1,400 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio test</title>
+    <meta name="description" content="Portfolio d'Edouard MAMARIL, étudiant en BTS SIO option SISR — Infrastructure, systèmes et réseaux.">
+    <meta name="author" content="Edouard MAMARIL">
+    <title>Edouard MAMARIL — Portfolio BTS SIO SISR</title>
     <link rel="stylesheet" href="style/base.css">
 </head>
-<body >
+<body>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
     <header>
-        <div id="logo">
-        </div>
-        
-        <nav id="onglets">
+        <a href="#accueil" id="logo" aria-label="Retour à l'accueil"></a>
+
+        <nav id="onglets" aria-label="Navigation principale">
             <ul>
-                <li><a class="button" href="https://portfolio.mamaril.workers.dev" value="Accueil"> Accueil</a></li>
+                <li><a class="button" href="#accueil">Accueil</a></li>
                 <li><a class="button" href="#aPropos">À propos</a></li>
                 <li><a class="button" href="#projets">Projets</a></li>
                 <li><a class="button" href="#competences">Compétences</a></li>
                 <li><a class="button" href="#stages">Stages</a></li>
-                <li><a class="button" href="#veille">Veille informatique</a></li>
+                <li><a class="button" href="#veille">Veille</a></li>
                 <li><a class="button" href="#contact">Contact</a></li>
-
             </ul>
         </nav>
-        
     </header>
 
     <main>
 
+        <!-- ============================================================
+             HERO + À PROPOS
+             ============================================================ -->
         <div class="video_section">
             <video id="home_video" class="bg_video" autoplay loop muted playsinline>
                 <source src="media/videos/visuel_portfolio.mp4" type="video/mp4">
             </video>
 
             <div class="video_overlay"></div>
-            
-           
-        
 
-        <section id="accueil">
-                <h1 style="font-size: 4rem;">Edouard MAMARIL</h1>
-                <h2>Étudiant en BTS SIO spécialité SISR</h2>
+            <section id="accueil">
+                <h1>Edouard MAMARIL</h1>
+                <h2>Étudiant en 2<sup>e</sup> année de BTS SIO — option SISR</h2>
 
                 <div id="infoSup">
-                    <p id="localisation">Localisation : Goussainville (95)</p>
-                    <a class="button" href="other/CV_MAMARIL.pdf">Télécharger mon CV</a>
-                    <a class="button" href="https://github.com/meiji4o4/">Github</a>
-                    <a class="button" href="https://www.linkedin.com/in/edouard-m-375b613b0">LinkedIn</a>
-                
+                    <p id="localisation">📍 Goussainville (95)</p>
+                    <a class="button" href="other/CV_MAMARIL.pdf" target="_blank" rel="noopener">
+                        Télécharger mon CV
+                    </a>
+                    <a class="button" href="https://github.com/meiji4o4/" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <a class="button" href="https://www.linkedin.com/in/edouard-m-375b613b0" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
                 </div>
-
-                
-                
-            
-            
             </section>
 
-            <section id="aPropos"  >
+            <section id="aPropos">
                 <div id="descMe" class="blur_div">
                     <h2>À propos</h2>
-                    <p>Edouard MAMARIL, étudiant en 1ère année BTS SIO (Services Informatiques aux Organisations), option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée Voillaume à Aulnay-sous-Bois. Fortement intéressé par l'infrastructure réseau et système, au même titre que la programmation, je me passionne pour l'Infrastructure As Code (automatisation des infrastructures par le code) et les méthodes DevOps </p>
+                    <p>
+                        Edouard MAMARIL, étudiant en 2<sup>e</sup> année de BTS SIO
+                        (Services Informatiques aux Organisations), option SISR
+                        (Solutions d'Infrastructure, Systèmes et Réseaux) au lycée
+                        Voillaume à Aulnay-sous-Bois.
+                    </p>
+                    <p>
+                        Fortement intéressé par l'infrastructure réseau et système,
+                        au même titre que la programmation, je me passionne pour
+                        l'<strong>Infrastructure As Code</strong> (automatisation
+                        des infrastructures par le code) et les méthodes
+                        <strong>DevOps</strong>.
+                    </p>
                 </div>
-                
-                    <div id="descBTS" class="blur_div" >
-                        <h2>"BTS SIO", qu'est-ce que c'est ?</h2>
-                        <p >Le BTS SIO (Services Informatiques aux Organisation) est une formation en 2 ans, destinée à ceux qui souhaitent avant tout devenir techniciens informatique, que ce soit dans l'infrastructure système et réseau, ou bien dans le développement. Deux options sont alors proposés : SLAM ou SISR.
-                        </p>
-                        <ul>
-                            <li class="desc">Option SLAM
-                                <p>L’option SLAM est orientée vers le développement et la gestion d’applications. Les étudiants apprennent à concevoir, réaliser et maintenir des programmes informatiques, que ce soit des applications de bureau, web ou mobiles. Au programme : langages de programmation (HTML/CSS, PHP, C#, etc.), bases de données, gestion de projets, et conception d'interfaces utilisateur. Les diplômés SLAM peuvent devenir développeurs, analystes programmeurs, ou encore techniciens d’applications.
-                                </p>
-                            </li>
 
-                            <li class="desc">Option SISR
-                                <p>L’option SISR se concentre sur l’administration des infrastructures réseau et systèmes. Les étudiants acquièrent des compétences pour installer, configurer et sécuriser des serveurs, des équipements réseau (routeurs, switchs), ainsi que pour gérer les systèmes d’exploitation (Windows, Linux). Ils apprennent aussi à superviser le réseau, à mettre en place des solutions de virtualisation et à assurer la cybersécurité. Les débouchés incluent les postes d’administrateur réseau, technicien systèmes et réseaux, ou encore support informatique.
-                                </p>
+                <div id="descBTS" class="blur_div">
+                    <h2>« BTS SIO », qu'est-ce que c'est ?</h2>
+                    <p>
+                        Le BTS SIO (Services Informatiques aux Organisations) est
+                        une formation en 2 ans, destinée à ceux qui souhaitent
+                        avant tout devenir techniciens informatique, que ce soit
+                        dans l'infrastructure système et réseau, ou bien dans le
+                        développement. Deux options sont alors proposées :
+                        <strong>SLAM</strong> ou <strong>SISR</strong>.
+                    </p>
 
-                            </li>
-                        </ul>
-                    </div>
-            
-            </section> 
+                    <ul>
+                        <li class="desc">
+                            Option SLAM
+                            <p>
+                                L'option SLAM est orientée vers le développement
+                                et la gestion d'applications. Les étudiants
+                                apprennent à concevoir, réaliser et maintenir
+                                des programmes informatiques, que ce soit des
+                                applications de bureau, web ou mobiles. Au
+                                programme : langages de programmation
+                                (HTML/CSS, PHP, C#, etc.), bases de données,
+                                gestion de projets et conception d'interfaces
+                                utilisateur.
+                            </p>
+                        </li>
+
+                        <li class="desc">
+                            Option SISR
+                            <p>
+                                L'option SISR se concentre sur l'administration
+                                des infrastructures réseau et systèmes. Les
+                                étudiants acquièrent des compétences pour
+                                installer, configurer et sécuriser des serveurs,
+                                des équipements réseau (routeurs, switchs),
+                                ainsi que pour gérer les systèmes d'exploitation
+                                (Windows, Linux). Ils apprennent aussi à
+                                superviser le réseau, à mettre en place des
+                                solutions de virtualisation et à assurer la
+                                cybersécurité.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
             <div class="spacer"></div>
         </div>
-        
-        
 
+        <!-- ============================================================
+             PROJETS
+             ============================================================ -->
+        <section id="projets">
+            <h2>Projets</h2>
 
-        <div id="other_section">
-        <section id="projets" >
-            <h2>PROJETS</h2>
-            <div id="filtre">
-                <form>
-                    <input id = srchbar class="srchbar" type="search">
-                    <select id = filter1 class="filter">
-                        
+            <div class="filtre">
+                <form onsubmit="return false;">
+                    <label for="srchbar-projets" class="visually-hidden">Rechercher un projet</label>
+                    <input id="srchbar-projets" class="srchbar" type="search" placeholder="Rechercher un projet…">
+
+                    <label for="filter1-projets" class="visually-hidden">Trier par</label>
+                    <select id="filter1-projets" class="filter filter1">
                         <option value="date">Date</option>
-                        <option value="ordre alphabétique">Ordre alphabétique</option>
+                        <option value="titre">Ordre alphabétique</option>
                     </select>
-                    <select id = filter2 class="filter">
-                        
+
+                    <label for="filter2-projets" class="visually-hidden">Ordre</label>
+                    <select id="filter2-projets" class="filter filter2">
                         <option value="croissant">Les plus récents</option>
                         <option value="decroissant">Les plus anciens</option>
                     </select>
-                    
+
+                    <button type="button" class="button btn-filtre" data-target="projets">
+                        Rechercher
+                    </button>
                 </form>
-                <button id = "btn_proj" class="button">Rechercher</button>
-
-                <div id = "art_container"> 
-                    
-                <div class="grid">
-                    <article class="box box1">PROJET 1 -------- 
-                        <br><br><br><br><br>
-                    </article>
-                    <article class="box box2">PROJET 2 -------- 
-                        <br><br><br><br><br>
-                    </article>
-                    <article class="box box3">PROJET 2 -------- 
-                        <br><br><br><br><br> 
-                    </article>
-                    <article class="box box4">PROJET 2 -------- 
-                        <br><br><br><br><br>
-                    </article>
-                    <article class="box box5">PROJET 2 -------- 
-                        <br><br><br><br><br> 
-                    </article>
-                    <article class="box box6">PROJET 2 -------- 
-                        <br><br><br><br><br>
-                    </article>
-                    
-                </div>            
-        </section>
-
-        <section id="competences">
-            <h2>COMPÉTENCES</h2>
-            <div id="filtre">
-                <form>
-                    <input id = srchbar class="srchbar" type="search">
-                    <select id = filter1 class="filter">
-                        
-                        <option value="date">Date</option>
-                        <option value="ordre alphabétique">Ordre alphabétique</option>
-                    </select>
-                    <select id = filter2 class="filter">
-                        
-                        <option value="croissant">Les plus récents</option>
-                        <option value="decroissant">Les plus anciens</option>
-                    </select>
-                    
-                </form>
-                <button id = "btn_proj" class="button">Rechercher</button>
-            
-        </section>
-
-        <section id="stages">
-            
-            <h2>STAGES</h2>
-            <div id="exp1">
-                <p>JUIN 2026 </p>
-                <p>S&G Beuzelin -- Goussainville (95)</p>
-                <p>Technicien support, systèmes et réseaux</p>
-                <ul><li>Installation , dépannage et configuration de postes de travail </li>
-                <li>Diagnostic d’incidents et maintenance de proximité. </li>
-                <li>Configuration de sauvegardes sur NAS et interventions sur le serveur d’entreprise.</li> 
-                <li>Manipulation et configuration d’une baie de brassage.</li>
-                    </ul>
             </div>
-            <div id="exp2"></div>
-               
-            <p></p>
+
+            <div class="grid" id="art_container-projets">
+                <article class="box">
+                    <h3>Infrastructure Windows Server / GLPI</h3>
+                    <p>
+                        Déploiement Active Directory et DNS, intégration de
+                        postes et suivi des incidents avec GLPI.
+                    </p>
+                    <span class="tag">Chef de projet · 2026</span>
+                </article>
+
+                <article class="box">
+                    <h3>Minicroquis</h3>
+                    <p>
+                        Logiciel d'assistance au dessin d'observation pour
+                        illustrateurs. Développement en JavaScript, HTML, CSS
+                        et C++.
+                    </p>
+                    <span class="tag">Développement · 2026</span>
+                </article>
+            </div>
         </section>
 
+        <!-- ============================================================
+             COMPÉTENCES
+             ============================================================ -->
+        <section id="competences">
+            <h2>Compétences</h2>
+
+            <div class="grid" id="art_container-competences">
+                <article class="box">
+                    <h3>Support &amp; exploitation</h3>
+                    <p>
+                        Assistance utilisateurs, gestion d'incidents, support
+                        via ticketing, diagnostic de premier niveau,
+                        maintenance, préparation et déploiement de postes,
+                        GLPI.
+                    </p>
+                </article>
+
+                <article class="box">
+                    <h3>Postes &amp; outils</h3>
+                    <p>
+                        Windows, macOS, Linux, Microsoft 365, Google Workspace,
+                        Active Directory, gestion des accès.
+                    </p>
+                </article>
+
+                <article class="box">
+                    <h3>Systèmes &amp; automatisation</h3>
+                    <p>
+                        Windows Server, PowerShell, Bash, Git &amp; GitHub.
+                    </p>
+                </article>
+
+                <article class="box">
+                    <h3>Réseaux</h3>
+                    <p>
+                        TCP/IP, adressage IP, DHCP, DNS, VLAN, Wi-Fi.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             STAGES
+             ============================================================ -->
+        <section id="stages">
+            <h2>Stages</h2>
+
+            <article id="exp1">
+                <p class="exp-date">Juin 2026</p>
+                <p class="exp-entreprise">S&amp;G Beuzelin — Goussainville (95)</p>
+                <p class="exp-poste">Technicien support, systèmes et réseaux</p>
+
+                <ul>
+                    <li>Installation, dépannage et configuration de postes de travail.</li>
+                    <li>Diagnostic d'incidents et maintenance de proximité.</li>
+                    <li>Configuration de sauvegardes sur NAS et interventions sur le serveur d'entreprise.</li>
+                    <li>Manipulation et configuration d'une baie de brassage.</li>
+                    <li>Réalisation d'un schéma du réseau de l'entreprise.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- ============================================================
+             VEILLE INFORMATIQUE
+             ============================================================ -->
         <section id="veille">
-            <h2>VEILLE INFORMATIQUE</h2>
+            <h2>Veille informatique</h2>
+
             <div id="explic_veille">
                 <div class="desc_veille">
-                    <h3>Qu'est-ce que la veille informatique</h3>
-                    <p>La veille informatique consiste à surveiller de manière systématique et régulière les évolutions, nouveautés et bonnes pratiques dans le domaine de l’informatique. Pour un futur technicien SISR, elle est essentielle : elle permet d’anticiper les changements (nouvelles versions d’outils, failles de sécurité, tendances comme l’IaC ou le cloud), de rester compétent sur le marché du travail et d’alimenter sa réflexion professionnelle. Une bonne veille ne se limite pas à collecter des informations : elle implique de les sélectionner, les analyser et les confronter à sa propre pratique.</p>
+                    <h3>Qu'est-ce que la veille informatique ?</h3>
+                    <p>
+                        La veille informatique consiste à surveiller de manière
+                        systématique et régulière les évolutions, nouveautés et
+                        bonnes pratiques dans le domaine de l'informatique. Pour
+                        un futur technicien SISR, elle est essentielle : elle
+                        permet d'anticiper les changements (nouvelles versions
+                        d'outils, failles de sécurité, tendances comme l'IaC ou
+                        le cloud), de rester compétent sur le marché du travail
+                        et d'alimenter sa réflexion professionnelle.
+                    </p>
                 </div>
+
                 <div class="desc_veille">
                     <h3>Ma démarche pour m'informer</h3>
-                    <p>Je structure ma veille autour de deux sources principales complémentaires : 
-                        </p><ul>
-                            <li>Un agrégateur de flux RSS personnalisé : j’utilise Inoreader (version gratuite) pour centraliser les articles de blogs techniques et médias spécialisés. Je suis notamment les flux officiels de HashiCorp (Terraform), de Red Hat (Ansible), ainsi que des sites comme The New Stack ou Le Monde Informatique (thèmes Cloud et Virtualisation). Chaque semaine, je parcours les titres et sauvegarde les articles les plus pertinents.</li>
-
-                            <li>Les communautés Reddit : je consulte régulièrement les subreddits r/sysadmin (anglophone) et r/sysadmin_fr (francophone). Ces forums d’échange entre administrateurs systèmes et réseaux me permettent de découvrir des retours d’expérience concrets, des astuces, des alertes sur des vulnérabilités ou des outils émergents, bien plus rapidement que dans les médias traditionnels.</li>
-                        </ul>
-                    <p></p>
-                </div>
-                <div class="desc_veille">
-                    <h3>L'IaC (Infrastructure as code)</h3>
                     <p>
-                        L’Infrastructure as Code (IaC) est une pratique qui consiste à décrire et gérer l’infrastructure informatique (serveurs, réseaux, bases de données, pare‑feux…) à l’aide de fichiers de configuration manipulables comme du code source. Au lieu d’effectuer des actions manuelles, on écrit des scripts qui automatisent la création, la modification et la suppression des ressources.
-
-                        Pourquoi ce sujet me correspond‑il particulièrement ?
-                        Personnellement, j’apprécie autant le développement et les algorithmes que l’administration des systèmes et réseaux. L’IaC se situe exactement à l’intersection des deux :
-
-                        </p><ul>
+                        Je structure ma veille autour de deux sources
+                        principales complémentaires :
+                    </p>
+                    <ul>
                         <li>
-                        Elle demande une rigueur de développeur : écrire du code propre, structuré, versionné (avec Git), et parfois concevoir de petites logiques algorithmiques (boucles, conditions, variables) dans les templates Terraform ou les playbooks Ansible.
+                            <strong>Un agrégateur de flux RSS</strong>
+                            personnalisé : j'utilise Inoreader pour centraliser
+                            les articles de blogs techniques et médias
+                            spécialisés (HashiCorp, Red Hat, The New Stack,
+                            Le Monde Informatique). Chaque semaine, je parcours
+                            les titres et sauvegarde les articles les plus
+                            pertinents.
                         </li>
                         <li>
-                        Elle s’applique directement aux métiers de l'administration systèmes et réseaux : déployer des VM, configurer des pare‑feux, gérer des clusters, assurer la reproductibilité des infrastructures etc.
+                            <strong>Les communautés Reddit</strong> : je
+                            consulte régulièrement les subreddits
+                            <em>r/sysadmin</em> et <em>r/sysadmin_fr</em>. Ces
+                            forums d'échange me permettent de découvrir des
+                            retours d'expérience concrets et des alertes sur
+                            des vulnérabilités ou outils émergents.
                         </li>
-                        </ul>
+                    </ul>
+                </div>
 
-                        Ainsi, l’IaC me permet de concilier mes deux centres d’intérêt : coder pour administrer, et administrer en codant. C’est aussi une compétence très recherchée sur le marché du travail, car elle accélère les déploiements, réduit les erreurs manuelles et facilite le travail collaboratif.
-
-                        Outils phares : je commence à explorer Terraform (provisionnement multi‑cloud) et Ansible (configuration système). Ma veille RSS et les échanges sur Reddit m’aident à suivre leurs évolutions et à découvrir des cas concrets d’utilisation en entreprise.
-                        
-                    <p></p>
+                <div class="desc_veille">
+                    <h3>L'IaC — Infrastructure as Code</h3>
+                    <p>
+                        L'Infrastructure as Code (IaC) est une pratique qui
+                        consiste à décrire et gérer l'infrastructure
+                        informatique (serveurs, réseaux, bases de données,
+                        pare-feux…) à l'aide de fichiers de configuration
+                        manipulables comme du code source. Au lieu d'effectuer
+                        des actions manuelles, on écrit des scripts qui
+                        automatisent la création, la modification et la
+                        suppression des ressources.
+                    </p>
+                    <p><strong>Pourquoi ce sujet me correspond-il ?</strong></p>
+                    <ul>
+                        <li>
+                            Elle demande une <strong>rigueur de développeur</strong> :
+                            écrire du code propre, structuré, versionné (avec
+                            Git), et parfois concevoir de petites logiques
+                            algorithmiques dans les templates Terraform ou les
+                            playbooks Ansible.
+                        </li>
+                        <li>
+                            Elle s'applique directement aux <strong>métiers de
+                            l'administration systèmes et réseaux</strong> :
+                            déployer des VM, configurer des pare-feux, gérer
+                            des clusters, assurer la reproductibilité des
+                            infrastructures.
+                        </li>
+                    </ul>
+                    <p>
+                        Outils phares : je commence à explorer
+                        <strong>Terraform</strong> (provisionnement multi-cloud)
+                        et <strong>Ansible</strong> (configuration système).
+                    </p>
                 </div>
             </div>
 
             <div id="articles">
-                <p>Retrouvez ici une sélection d'articles dans le domaine de l'IaC</p>
-                <div id="filtre">
-                <form>
-                    <input id = srchbar class="srchbar" type="search">
-                    <select id = filter1 class="filter">
-                        
-                        <option value="date">Date</option>
-                        <option value="ordre alphabétique">Ordre alphabétique</option>
-                    </select>
-                    <select id = filter2 class="filter">
-                        
-                        <option value="croissant">Les plus récents</option>
-                        <option value="decroissant">Les plus anciens</option>
-                    </select>
-                    
-                </form>
-                <button id = "btn_article" class="button">Rechercher</button>
+                <p>Retrouvez ici une sélection d'articles dans le domaine de l'IaC :</p>
 
-                <div id = "art_container"> 
-                    
-                
+                <div class="filtre">
+                    <form onsubmit="return false;">
+                        <label for="srchbar-veille" class="visually-hidden">Rechercher un article</label>
+                        <input id="srchbar-veille" class="srchbar" type="search" placeholder="Rechercher un article…">
+
+                        <label for="filter1-veille" class="visually-hidden">Trier par</label>
+                        <select id="filter1-veille" class="filter filter1">
+                            <option value="date">Date</option>
+                            <option value="titre">Ordre alphabétique</option>
+                        </select>
+
+                        <label for="filter2-veille" class="visually-hidden">Ordre</label>
+                        <select id="filter2-veille" class="filter filter2">
+                            <option value="croissant">Les plus récents</option>
+                            <option value="decroissant">Les plus anciens</option>
+                        </select>
+
+                        <button type="button" id="btn_article" class="button btn-filtre" data-target="veille">
+                            Rechercher
+                        </button>
+                    </form>
                 </div>
-            
+
+                <div id="art_container-veille"></div>
             </div>
-            
         </section>
 
+        <!-- ============================================================
+             CONTACT
+             ============================================================ -->
         <section id="contact">
-            <h2>CONTACT</h2>
+            <h2>Contact</h2>
+
             <div id="contact1" class="contact">
-                <a href="mailto:mamariledouardpro@outlook.fr"> E-mail : mamariledouardpro@outlook.fr </a>
-                
+                <a href="mailto:mamariledouardpro@outlook.fr">
+                    ✉️ mamariledouardpro@outlook.fr
+                </a>
             </div>
-            <br>
-            <div id="contact2" class="contact" >
-                <img src="media/icons/purple-mail-icon.png">
-                <a href="https://www.linkedin.com/in/edouard-m-375b613b0"> LinkedIn </a>
-                
+
+            <div id="contact2" class="contact">
+                <img src="media/icons/purple-mail-icon.png" alt="" width="18" height="18">
+                <a href="https://www.linkedin.com/in/edouard-m-375b613b0" target="_blank" rel="noopener">
+                    LinkedIn — Edouard MAMARIL
+                </a>
             </div>
-            
         </section>
 
-
-
-</div>
     </main>
 
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
     <footer>
-        (mettre un footer)
+        <p style="margin: 0 0 .4rem; color: var(--text-secondary);">
+            Portfolio d'Edouard MAMARIL. BTS SIO option SISR
+        </p>
+        <p style="margin: 0; font-size: .82rem;">
+            © 2026 
+        </p>
     </footer>
-    
-    
-    
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <script src="js/libs/gsap.min.js"></script>
+    <script src="js/libs/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
-
-<script src="js/libs/gsap.min.js"></script>
-<script src="js/libs/ScrollTrigger.min.js"></script>
-
-<script src="js/main.js"></script>
-
-
-
 </html>
