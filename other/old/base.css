@@ -1,0 +1,363 @@
+@font-face {
+    font-family: "Lato-Light";
+    src: url(fonts/lato/Lato-Light.ttf)
+}
+
+@font-face {
+    font-family: "Lato-Medium";
+    src: url(fonts/lato/Lato-Medium.ttf)
+}
+@font-face {
+    font-family: "Lato-Black";
+    src: url(fonts/lato/Lato-Black.ttf)
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+@keyframes couleursDyna{
+    0% {background-color: rgb(83, 50, 160);}
+    50% {background-color: rgb(38, 30, 162);}
+    100% {background-color: rgb(83, 50, 160);}
+}
+
+
+
+
+
+.background_dyna{
+    animation-name: couleursDyna;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    animation-name: none;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    background-color: rgb(28, 30, 35);
+    
+}
+
+
+.button{
+    color: white;
+    font-family: "Lato-Medium";
+    border :none;
+    padding: 0.5rem 1rem;  
+    border-radius : 4px;
+    cursor : pointer;
+    margin: 0.5rem;
+}
+#srchbar,
+#filter1,
+#filter2,
+#btn_article{
+    background-color: rgb(77, 77, 77);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-family: "Lato-Medium", sans-serif;
+}
+
+@keyframes boutonDyna {
+    100% {background-color: rgba(143, 143, 143, 0.534)};
+    100%{animation-play-state: paused};
+}
+.button:hover{
+    animation-name: boutonDyna;
+    animation-timing-function: cubic-bezier();
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+
+}
+#onglets{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+#descMe{
+    margin: 4rem;
+}
+
+.blur_div{
+    border-radius: 15px;
+    padding : 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.110);
+    backdrop-filter: blur(15px);
+
+
+}
+
+html{
+    font-family: "Lato-Medium";
+    font-size: 100%;
+    color: white;
+    
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.155);
+    display: flex;
+    border-bottom-left-radius: 13px ;
+    border-bottom-right-radius: 13px;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    
+}
+
+#onglets{
+    right: 0;
+    max-height: 5rem;
+}
+
+header ul >li{
+    display:inline-flex;
+}
+
+footer{
+    
+    border-radius: 30px;
+}
+
+
+
+.video_section{
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    
+}    
+
+.bg_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    
+}
+
+.contact:hover{
+    
+    cursor: pointer;
+    color: rgb(162, 162, 255);
+}
+/*
+.video_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, black 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#other_section{
+    position:relative;
+}
+.other_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, transparent 60%, black 100%);
+    pointer-events: none;
+    z-index: 0;
+} */
+
+.video_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 60%, rgb(28, 30, 35) 100%);
+    background-color: rgba(0, 0, 0, 0.368) ;
+    pointer-events: none;
+    margin-bottom: 4rem;
+    z-index: 1;
+}
+
+.spacer {
+    height: 25vh;
+}
+
+#accueil,
+#aPropos{
+    position: relative;
+    z-index: 2;
+    
+}
+
+#accueil{
+    position: relative;
+    min-height: 100vh;   /* pour que la section prenne au moins toute la hauteur de l’écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    scroll-margin-top: 0;
+}
+
+#aPropos {
+    border-radius: 20px;
+    scroll-margin-top: 0;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    margin-bottom: 6rem;
+    
+}
+
+
+
+
+#aPropos div {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#onglets {
+    border-radius: 10px;
+}
+
+
+
+#infoSup {
+    border-radius: 10px;
+    background-color: rgba(82, 196, 249, 0.150);
+
+    /*
+    background-color: rgba(0, 183, 255, 0.182);
+    */
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur (20px);
+    
+}
+
+
+
+.desc{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+#projets,
+#competences,
+#stages,
+#veille,
+#contact{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    background-color: rgba(182, 225, 243, 0.137);
+    scroll-margin-top: 100px;
+    margin-bottom: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    
+
+}
+
+
+
+#projets h2,
+#competences h2,
+#stages h2,
+#veille h2,
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+.desc_veille{
+    border-radius: 10px;
+    background-color: rgba(120, 120, 120, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur (20px);
+    margin-bottom: 2rem;
+
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  width: 100%;
+}
+.box {
+  background: rgb(62, 62, 62);
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8e3df;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-height: 5rem;
+  min-width: 5rem;
+  
+
+}
+
+.box:hover{
+    background: rgb(113, 113, 113);
+    cursor: pointer;
+}
+
+.box1 {
+grid-row: 1;
+}
+
+.box2 {
+grid-row: 1;
+}
+
+.box3 {
+grid-row: 2;
+}
+
+.box4 {
+grid-row: 2;
+}
+
+.box5 {
+grid-row: 3;
+}
+
+.box6 {
+grid-row: 3;
+}
+
+

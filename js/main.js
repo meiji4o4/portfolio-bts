@@ -85,7 +85,7 @@ btn_article.addEventListener ('click', () => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".video_overlay", {
-    backgroundColor: "rgba(28,30,35,1)", // couleur moyenne de ton animation
+    backgroundColor: "rgba(28,30,35,1)", 
     ease: "power4.in",
     scrollTrigger: {
         trigger: ".video_section",
