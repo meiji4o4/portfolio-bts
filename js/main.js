@@ -226,9 +226,12 @@ window.addEventListener('load', () => {
         }, '-=0.7');
     }
     if (document.querySelector('#infoSup')) {
-        heroTl.from('#infoSup > *', {
-            opacity: 0, y: 30, duration: 0.7,
-            stagger: 0.1, ease: 'power3.out'
+        heroTl.from('#infoSup', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: 'power3.out',
+            clearProps: 'opacity,transform'
         }, '-=0.6');
     }
     if (document.querySelector('.scroll-indicator')) {
