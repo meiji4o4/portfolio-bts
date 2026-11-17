@@ -68,9 +68,6 @@
             
             <div class="scroll-indicator" aria-hidden="true"></div>
         </section>
-            
-            <div class="scroll-indicator" aria-hidden="true"></div>
-        </section>
 
         <!-- À PROPOS -->
         <section id="aPropos">
@@ -187,17 +184,17 @@
             </article>
         </section>
 
-        <!-- VEILLE -->
+        <!-- VEILLE INFORMATIONNELLE -->
         <section id="veille">
-            <h2>Veille informatique</h2>
+            <h2>Veille informationnelle</h2>
             
             <div id="explic_veille" style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
                 
                 <div class="grid-2-cols">
                     <div class="glass-panel desc_veille">
-                        <h3>Qu'est-ce que la veille informatique ?</h3>
+                        <h3>Qu'est-ce que la veille informationnelle ?</h3>
                         <p>
-                            La veille informatique consiste à surveiller de manière systématique et régulière les évolutions, nouveautés et bonnes pratiques dans le domaine de l'informatique. 
+                            La veille informationnelle consiste à surveiller de manière systématique et régulière les évolutions, nouveautés et bonnes pratiques dans le domaine de l'informatique. 
                         </p>
                         <p style="margin-bottom: 0;">
                             Pour un futur technicien SISR, elle est essentielle : elle permet d'anticiper les changements (nouvelles versions d'outils, failles de sécurité, tendances comme l'IaC ou le cloud), de rester compétent sur le marché du travail et d'alimenter sa réflexion professionnelle.
@@ -206,7 +203,7 @@
 
                     <div class="glass-panel desc_veille">
                         <h3>Ma démarche pour m'informer</h3>
-                        <p>Je structure ma veille autour de deux sources principales complémentaires :</p>
+                        <p>Je structure ma veille informationnelle autour de deux sources principales complémentaires :</p>
                         <ul style="margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem;">
                             <li>
                                 <strong>Un agrégateur de flux RSS personnalisé</strong> : j'utilise Inoreader pour centraliser les articles de blogs techniques et médias spécialisés (HashiCorp, Red Hat, The New Stack). Chaque semaine, je parcours les titres et sauvegarde les articles les plus pertinents.
@@ -232,10 +229,17 @@
 
             </div>
 
+            <!-- Introduction explicative des articles sélectionnés -->
+            <div class="veille-intro glass-panel-sm">
+                <p>
+                    <strong>Sélection d'articles :</strong> Les ressources ci-dessous ont été sélectionnées par mes soins et sont le fruit de ma <strong>veille informationnelle</strong> régulière. Cliquez sur un article pour consulter sa fiche récapitulative (thème, résumé et intérêt pour mon parcours) avant d'accéder à la source originale.
+                </p>
+            </div>
+
             <!-- Section de recherche d'articles de veille -->
             <div class="filtre glass-panel-sm">
                 <form role="search" onsubmit="return false;">
-                    <input id="srchbar-veille" class="srchbar" type="search" placeholder="Rechercher un article…" autocomplete="off">
+                    <input id="srchbar-veille" class="srchbar" type="search" placeholder="Rechercher un article, un thème…" autocomplete="off">
                     <select id="filter1-veille" class="filter filter1">
                         <option value="date">Date</option>
                         <option value="titre">Alphabétique</option>
@@ -269,6 +273,38 @@
         <p class="footer-brand">Edouard Mamaril. © 2026</p>
         <p class="footer-sub">Conçu avec exigence. BTS SIO SISR.</p>
     </footer>
+
+    <!-- OVERLAY / MODALE RÉCAPITULATIVE D'ARTICLE -->
+    <div id="article-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-content glass-panel">
+            <button type="button" id="modal-close" class="modal-close" aria-label="Fermer la fenêtre">×</button>
+            
+            <div class="modal-meta">
+                <span id="modal-theme" class="tag">Thème</span>
+                <time id="modal-date" class="modal-date">Date</time>
+            </div>
+            
+            <h3 id="modal-title">Titre de l'article</h3>
+            
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>Résumé</h4>
+                    <p id="modal-resume"></p>
+                </div>
+                <div class="modal-section">
+                    <h4>Intérêt</h4>
+                    <p id="modal-interet"></p>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="button-primary">
+                    Lire l'article complet ↗
+                </a>
+                <button type="button" id="modal-close-btn" class="button-outline">Fermer</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/libs/gsap.min.js" defer></script>
     <script src="js/libs/ScrollTrigger.min.js" defer></script>

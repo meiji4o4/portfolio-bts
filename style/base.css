@@ -64,6 +64,7 @@ h3 { font-family: "Lato-Medium", sans-serif; font-size: 1.25rem; }
 p { margin: 0 0 1.2em; }
 a { text-decoration: none; color: inherit; }
 ul { padding-left: 1.5rem; margin: 0; }
+strong { color: var(--text-high); }
 
 ::selection { background: var(--text-high); color: var(--bg-base); }
 ::-webkit-scrollbar { width: 8px; }
@@ -211,15 +212,25 @@ section {
 .exp-date time { color: var(--text-low); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* ============================================================
-   VEILLE (Articles générés) - AVEC SCROLL PERSONNALISÉ
+   VEILLE INFORMATIONNELLE (Intro & Liste avec Scroll)
    ============================================================ */
+.veille-intro {
+    margin-bottom: 1.5rem;
+    border-left: 2px solid var(--accent);
+}
+.veille-intro p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-med);
+}
+
 .articles-list { 
     display: flex; 
     flex-direction: column; 
     gap: 0.8rem; 
-    max-height: 420px; /* Limite la hauteur (environ 5 articles) */
-    overflow-y: auto;  /* Active le scroll vertical */
-    padding-right: 12px; /* Laisse de la place pour la scrollbar */
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 12px;
     scrollbar-color: var(--glass-border-hover) transparent;
     scrollbar-width: thin;
 }
@@ -228,17 +239,171 @@ section {
 .articles-list::-webkit-scrollbar-thumb { background: var(--glass-border-hover); border-radius: 4px; }
 .articles-list::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-.articles-list > div {
-    padding: 1.2rem 1.5rem; background: var(--glass-bg);
-    border: 1px solid var(--glass-border); border-radius: 8px;
+.article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    cursor: pointer;
     transition: all var(--transition-fast);
 }
-.articles-list > div:hover { 
+.article-item:hover { 
     background: var(--glass-bg-hover); 
     border-color: var(--glass-border-hover); 
     transform: translateX(8px); 
 }
-.articles-list a { color: var(--text-high); font-family: "Lato-Medium", sans-serif; display: block; }
+.article-item-title {
+    color: var(--text-high);
+    font-family: "Lato-Medium", sans-serif;
+}
+.article-date {
+    color: var(--accent);
+    margin-right: 10px;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+.article-item-hint {
+    font-size: 0.78rem;
+    color: var(--accent);
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+.article-item:hover .article-item-hint {
+    opacity: 1;
+}
+
+/* ============================================================
+   OVERLAY / MODALE RÉCAPITULATIVE D'ARTICLE
+   ============================================================ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(3, 3, 5, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(14, 15, 22, 0.94);
+    border: 1px solid var(--glass-border-hover);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    transform: translateY(16px) scale(0.98);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.is-open .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    color: var(--text-med);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.modal-close:hover {
+    color: var(--text-high);
+    border-color: var(--text-high);
+    background: var(--glass-bg-hover);
+}
+
+.modal-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-right: 2.5rem;
+}
+.modal-meta .tag {
+    margin-top: 0;
+    color: var(--accent);
+    border: 1px solid rgba(212, 200, 184, 0.25);
+}
+.modal-date {
+    font-size: 0.85rem;
+    color: var(--text-low);
+}
+
+#modal-title {
+    font-family: "Lato-Black", sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+    line-height: 1.3;
+    color: var(--text-high);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+.modal-section {
+    padding: 1.1rem 1.3rem;
+    background: var(--glass-bg);
+    border-left: 2px solid var(--accent);
+    border-radius: 6px;
+}
+.modal-section h4 {
+    margin: 0 0 0.4rem;
+    font-family: "Lato-Black", sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+.modal-section p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-high);
+    line-height: 1.55;
+}
+
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+}
 
 /* ============================================================
    FOOTER
@@ -257,6 +422,11 @@ footer { text-align: center; padding: 4rem var(--page-gutter); border-top: 1px s
     .hero-actions { flex-direction: column; }
     .grid-2-cols { grid-template-columns: 1fr; }
     .exp-header { flex-direction: column; gap: 0.5rem; }
+}
+@media (max-width: 600px) {
+    .article-item { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+    .modal-actions { flex-direction: column; }
+    .modal-actions > * { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
     .aurora-gradient { animation: none; }
