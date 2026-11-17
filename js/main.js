@@ -9,19 +9,11 @@ function formaterDateFR(dateISO) {
     const [annee, mois, jour] = dateISO.split('-');
     const dateObj = new Date(Number(annee), Number(mois) - 1, Number(jour));
 
-    const longue = new Intl.DateTimeFormat('fr-FR', {
+    return new Intl.DateTimeFormat('fr-FR', {
         day: 'numeric',
         month: 'long',
         year: 'numeric'
     }).format(dateObj);
-
-    const courte = `${jour}/${mois}/${annee}`;
-    return { longue, courte };
-}
-
-function genererHTMLDate(dateISO) {
-    const { longue, courte } = formaterDateFR(dateISO);
-    return `<span class="date-long">${longue}</span><span class="date-short">${courte}</span>`;
 }
 
 // ============================================================
@@ -162,7 +154,7 @@ function ouvrirModalArticle(article) {
 
     modalTitle.textContent = article.titre;
     modalDate.setAttribute('datetime', article.date);
-    modalDate.innerHTML = genererHTMLDate(article.date);
+    modalDate.textContent = formaterDateFR(article.date);
     modalTheme.textContent = article.theme;
     modalResume.textContent = article.resume;
     modalInteret.textContent = article.interet;
@@ -215,8 +207,8 @@ function afficherArticles(animer) {
 
     const q = normaliser(srchVeille ? srchVeille.value.trim() : '');
     const liste = articles.filter(a => {
-        const { longue, courte } = formaterDateFR(a.date);
-        return normaliser(`${a.titre} ${a.date} ${longue} ${courte} ${a.theme}`).includes(q);
+        const dateFR = formaterDateFR(a.date);
+        return normaliser(`${a.titre} ${a.date} ${dateFR} ${a.theme}`).includes(q);
     });
     gestion_tri(liste, filter1V, filter2V);
 
@@ -241,7 +233,7 @@ function afficherArticles(animer) {
 
         const info = document.createElement('div');
         info.className = 'article-item-title';
-        info.innerHTML = `<span class="article-date">${genererHTMLDate(a.date)}</span> ${a.titre}`;
+        info.innerHTML = `<span class="article-date">${formaterDateFR(a.date)}</span> ${a.titre}`;
 
         const hint = document.createElement('span');
         hint.className = 'article-item-hint';

@@ -224,6 +224,27 @@ section {
     color: var(--text-med);
 }
 
+.desc_veille {
+    display: flex;
+    flex-direction: column;
+}
+
+.veille-doc-box {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.veille-doc-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-med);
+}
+
 .articles-list { 
     display: flex; 
     flex-direction: column; 
