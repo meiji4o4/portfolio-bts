@@ -9,11 +9,11 @@
    DESIGN TOKENS (Variables)
    ============================================================ */
 :root {
-    /* Palette Aurora (Deep Space, Amethyst, Ocean) */
-    --bg-base: #030305;
-    --aurora-1: #2a1140; /* Violet profond */
-    --aurora-2: #0f1c3f; /* Bleu abysse */
-    --aurora-3: #0a2624; /* Touche émeraude sombre */
+    /* Palette sobre (Obsidienne, Bleu ardoise & Charbon chaud) */
+    --bg-base: #090a0e;
+    --aurora-1: #161c28; /* Bleu ardoise profond */
+    --aurora-2: #1d1a17; /* Charbon chaud (rappel de l'accent sable) */
+    --aurora-3: #10151c; /* Gris nuit */
     
     /* Textes */
     --text-high: #ffffff;
@@ -21,11 +21,11 @@
     --text-low: #6c7482;
     
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.02);
-    --glass-bg-hover: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.025);
+    --glass-bg-hover: rgba(255, 255, 255, 0.055);
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-border-hover: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
     
     /* Accents */
     --accent: #d4c8b8; /* Sable argenté */
@@ -72,7 +72,7 @@ strong { color: var(--text-high); }
 ::-webkit-scrollbar-thumb { background: var(--glass-border-hover); }
 
 /* ============================================================
-   DYNAMIC MESH BACKGROUND (Le Fond Aurore)
+   DYNAMIC MESH BACKGROUND (Fond Ambiant Sobre)
    ============================================================ */
 .bg-aurora {
     position: fixed; inset: 0; z-index: -10;
@@ -83,22 +83,23 @@ strong { color: var(--text-high); }
     position: absolute; width: 150vw; height: 150vh;
     top: -25%; left: -25%;
     background-image: 
-        radial-gradient(circle at 50% 50%, var(--aurora-1) 0%, transparent 60%),
-        radial-gradient(circle at 80% 20%, var(--aurora-2) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, var(--aurora-3) 0%, transparent 50%);
-    filter: blur(120px);
-    animation: aurora-flow 25s linear infinite alternate;
+        radial-gradient(circle at 30% 35%, var(--aurora-1) 0%, transparent 55%),
+        radial-gradient(circle at 75% 25%, var(--aurora-2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, var(--aurora-3) 0%, transparent 55%);
+    filter: blur(130px);
+    opacity: 0.9;
+    animation: aurora-flow 28s linear infinite alternate;
     transform-origin: center center;
     will-change: transform;
 }
 @keyframes aurora-flow {
     0% { transform: rotate(0deg) scale(1); }
-    100% { transform: rotate(20deg) scale(1.1) translate(5%, 5%); }
+    100% { transform: rotate(15deg) scale(1.08) translate(4%, 4%); }
 }
 .aurora-noise {
     position: absolute; inset: -50%;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.08; mix-blend-mode: overlay;
+    opacity: 0.06; mix-blend-mode: overlay;
 }
 
 /* ============================================================
@@ -141,7 +142,7 @@ header {
     position: fixed; top: 0; left: 0; right: 0;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1rem var(--page-gutter); z-index: 100;
-    background: linear-gradient(to bottom, rgba(3,3,5,0.8), transparent);
+    background: linear-gradient(to bottom, rgba(9, 10, 14, 0.85), transparent);
     backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -220,7 +221,7 @@ section {
 }
 
 /* ============================================================
-   COMPÉTENCES (Bandeau E5, Filtres & Grille Granulaire)
+   COMPÉTENCES (Bandeau E5, Filtres & Grille avec Scroll 3 lignes)
    ============================================================ */
 .competences-doc-box {
     margin-bottom: 1.5rem;
@@ -288,8 +289,20 @@ section {
 .grid-skills {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    align-content: start;
     gap: 1.2rem;
+    max-height: 645px; /* Limite à ~3 lignes visibles */
+    overflow-y: auto;
+    padding-top: 6px;
+    padding-right: 12px;
+    scrollbar-color: var(--glass-border-hover) transparent;
+    scrollbar-width: thin;
 }
+.grid-skills::-webkit-scrollbar { width: 6px; }
+.grid-skills::-webkit-scrollbar-track { background: transparent; }
+.grid-skills::-webkit-scrollbar-thumb { background: var(--glass-border-hover); border-radius: 4px; }
+.grid-skills::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
 .skill-card {
     padding: 1.4rem 1.6rem;
     display: flex;
@@ -428,7 +441,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    background: rgba(3, 3, 5, 0.82);
+    background: rgba(9, 10, 14, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     opacity: 0;
@@ -449,7 +462,7 @@ section {
     max-width: 660px;
     max-height: 90vh;
     overflow-y: auto;
-    background: rgba(14, 15, 22, 0.94);
+    background: rgba(16, 18, 25, 0.95);
     border: 1px solid var(--glass-border-hover);
     padding: clamp(1.5rem, 4vw, 2.5rem);
     transform: translateY(16px) scale(0.98);
@@ -564,6 +577,7 @@ footer { text-align: center; padding: 4rem var(--page-gutter); border-top: 1px s
     .exp-header { flex-direction: column; gap: 0.5rem; }
 }
 @media (max-width: 600px) {
+    .grid-skills { max-height: 580px; }
     .article-item { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
     .modal-actions { flex-direction: column; }
     .modal-actions > * { width: 100%; }

@@ -289,6 +289,8 @@ afficherArticles(false);
     function filtrerCompetences() {
         const q = normaliser(champ ? champ.value.trim() : '');
         let nbVisibles = 0;
+        conteneur.scrollTop = 0;
+        vide.hidden = nbVisibles > 0;
 
         cartes.forEach(carte => {
             const cat = carte.dataset.category || '';
