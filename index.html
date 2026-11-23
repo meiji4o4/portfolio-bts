@@ -13,7 +13,7 @@
 
     <noscript>
         <style>
-            .reveal-hero, .reveal, .blur_div, .box { opacity: 1 !important; transform: none !important; visibility: visible !important; }
+            .reveal-hero, .reveal, .blur_div, .box, .skill-card { opacity: 1 !important; transform: none !important; visibility: visible !important; }
             .scroll-indicator, .bg-aurora { display: none !important; }
         </style>
     </noscript>
@@ -34,9 +34,9 @@
         <nav id="onglets" aria-label="Navigation principale">
             <ul>
                 <li><a class="nav-link" href="#aPropos">À propos</a></li>
-                <li><a class="nav-link" href="#projets">Projets</a></li>
+                <li><a class="nav-link" href="#projets">Réalisations</a></li>
                 <li><a class="nav-link" href="#competences">Compétences</a></li>
-                <li><a class="nav-link" href="#stages">Stages</a></li>
+                <li><a class="nav-link" href="#stages">Expérience</a></li>
                 <li><a class="nav-link" href="#veille">Veille</a></li>
                 <li><a class="button-primary" href="#contact">Contact</a></li>
             </ul>
@@ -114,13 +114,13 @@
             </div>
         </section>
 
-        <!-- PROJETS -->
+        <!-- RÉALISATIONS (Issus du tableau de synthèse E5) -->
         <section id="projets">
-            <h2>Projets</h2>
+            <h2>Réalisations</h2>
             
             <div class="filtre glass-panel-sm">
                 <form role="search" onsubmit="return false;">
-                    <input id="srchbar-projets" class="srchbar" type="search" placeholder="Rechercher un projet…" autocomplete="off">
+                    <input id="srchbar-projets" class="srchbar" type="search" placeholder="Rechercher une réalisation…" autocomplete="off">
                     <select id="filter1-projets" class="filter filter1">
                         <option value="date">Date</option>
                         <option value="titre">Alphabétique</option>
@@ -134,52 +134,233 @@
             </div>
 
             <div class="grid" id="art_container-projets" aria-live="polite">
+                
+                <!-- ====================================================
+                     AJOUTER ICI LES RÉALISATIONS DU STAGE DE 2e ANNÉE
+                     (18 janvier – 13 mars) UNE FOIS LE TABLEAU COMPLÉTÉ
+                     ==================================================== -->
+
+                <!-- RÉALISATIONS EN MILIEU PROFESSIONNEL (1re année — S&G Beuzelin) -->
                 <article class="box glass-panel">
-                    <h3>Infrastructure Windows Server / GLPI</h3>
-                    <p>Déploiement Active Directory et DNS, intégration de postes et suivi des incidents avec GLPI.</p>
-                    <span class="tag">Chef de projet · 2026</span>
+                    <h3>Support de proximité et déploiement de postes de travail</h3>
+                    <p>Installation, configuration et dépannage des postes utilisateurs, diagnostic d'incidents de premier niveau, maintenance et brassage réseau.</p>
+                    <span class="tag">Milieu professionnel · Juin 2026</span>
                 </article>
 
                 <article class="box glass-panel">
-                    <h3>Minicroquis</h3>
-                    <p>Logiciel d'assistance au dessin d'observation pour illustrateurs. Développement en JS, HTML, CSS et C++.</p>
-                    <span class="tag">Développement · 2026</span>
+                    <h3>Administration serveur et mise en place des sauvegardes</h3>
+                    <p>Interventions sur le serveur d'entreprise, configuration des sauvegardes sur NAS et réalisation du schéma réseau de l'organisation.</p>
+                    <span class="tag">Milieu professionnel · Juin 2026</span>
                 </article>
+
+                <!-- RÉALISATIONS EN COURS DE FORMATION (BTS SIO SISR) -->
+                <article class="box glass-panel">
+                    <h3>Supervision et administration avancée des services</h3>
+                    <p>Mise en place d'outils de supervision pour le suivi de disponibilité des serveurs et services réseau, diagnostic et administration avancée.</p>
+                    <span class="tag">En formation · 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Sécurisation réseau et accès distants</h3>
+                    <p>Durcissement de l'architecture réseau, filtrage des flux et déploiement de solutions d'accès distants sécurisés.</p>
+                    <span class="tag">En formation · 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Infrastructure virtualisée, haute disponibilité et sauvegarde</h3>
+                    <p>Déploiement d'environnements virtualisés, mise en œuvre de mécanismes de continuité de service et stratégie de sauvegarde.</p>
+                    <span class="tag">En formation · 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Conception d'un portfolio professionnel et veille informationnelle</h3>
+                    <p>Développement du portfolio en ligne (HTML, CSS, JS), gestion de l'identité professionnelle et veille sur l'Infrastructure as Code via Inoreader.</p>
+                    <span class="tag">En formation · 2025 – 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Mise en place d'une solution ITSM (GLPI) et masterisation de postes</h3>
+                    <p>Recensement du parc informatique, gestion des tickets d'incidents sous GLPI, masterisation et intégration des postes clients au domaine.</p>
+                    <span class="tag">En formation · 2025 – 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Déploiement d'un domaine Active Directory et des services réseau essentiels</h3>
+                    <p>Installation de Windows Server, configuration d'un contrôleur de domaine Active Directory, gestion des habilitations et services DHCP / DNS.</p>
+                    <span class="tag">En formation · 2025 – 2026</span>
+                </article>
+
+                <article class="box glass-panel">
+                    <h3>Conception et segmentation d'une infrastructure réseau d'entreprise</h3>
+                    <p>Conception d'une architecture TCP/IP, définition du plan d'adressage IP et segmentation logique du réseau local par VLAN.</p>
+                    <span class="tag">En formation · Sept. – Oct. 2025</span>
+                </article>
+
             </div>
         </section>
 
-        <!-- COMPÉTENCES -->
+        <!-- COMPÉTENCES (Granulaires avec recherche + filtres par catégorie) -->
         <section id="competences">
-            <h2>Expertise technique</h2>
-            <div class="grid">
-                <article class="box glass-panel">
-                    <h3>Systèmes & IaC</h3>
-                    <p>Windows Server, Linux, PowerShell, Bash, Git, GitHub. Introduction à Terraform et Ansible.</p>
+            <h2>Compétences</h2>
+
+            <div class="competences-doc-box glass-panel-sm">
+                <p>
+                    <strong>Tableau de synthèse professionnelle (Épreuve E5) :</strong> Retrouvez le détail de mes réalisations et des compétences du référentiel BTS SIO SISR mises en œuvre.
+                </p>
+                <a class="button-outline" href="other/Tableau_Synthese_E5.pdf" target="_blank" rel="noopener noreferrer">
+                    Consulter le tableau de synthèse ↗
+                </a>
+            </div>
+
+            <!-- Barre de recherche + boutons de catégories -->
+            <div class="skills-controls glass-panel-sm">
+                <form role="search" onsubmit="return false;" class="skills-search-row">
+                    <input id="srchbar-competences" class="srchbar" type="search" placeholder="Rechercher une compétence, un outil (ex. GLPI, VLAN, PowerShell)…" autocomplete="off">
+                    <span id="skills-count" class="skills-count" aria-live="polite">18 compétences</span>
+                </form>
+
+                <div class="filter-pills" id="skills-filters" role="group" aria-label="Filtrer par catégorie de compétences">
+                    <button type="button" class="filter-pill is-active" data-cat="all" aria-pressed="true">Toutes</button>
+                    <button type="button" class="filter-pill" data-cat="support" aria-pressed="false">Support & Exploitation</button>
+                    <button type="button" class="filter-pill" data-cat="reseaux" aria-pressed="false">Réseaux & Sécurité</button>
+                    <button type="button" class="filter-pill" data-cat="systemes" aria-pressed="false">Systèmes & Continuité</button>
+                    <button type="button" class="filter-pill" data-cat="identites" aria-pressed="false">Postes & Identités</button>
+                    <button type="button" class="filter-pill" data-cat="automatisation" aria-pressed="false">Automatisation & IaC</button>
+                </div>
+            </div>
+
+            <div class="grid-skills" id="container-competences" aria-live="polite">
+                
+                <!-- SUPPORT & EXPLOITATION -->
+                <article class="box glass-panel skill-card" data-category="support">
+                    <h3>Gestion d'incidents & Ticketing (GLPI)</h3>
+                    <p>Collecte, qualification, suivi et résolution des demandes d'assistance utilisateurs via l'outil ITSM GLPI.</p>
+                    <span class="tag">Support & Exploitation</span>
                 </article>
-                <article class="box glass-panel">
-                    <h3>Réseaux & Sécurité</h3>
-                    <p>Architecture TCP/IP, DHCP, DNS, VLAN, Wi-Fi. Concepts de pare-feu et segmentation réseau.</p>
+
+                <article class="box glass-panel skill-card" data-category="support">
+                    <h3>Assistance & Support de proximité</h3>
+                    <p>Diagnostic de premier niveau, dépannage matériel et logiciel sur site et accompagnement des utilisateurs.</p>
+                    <span class="tag">Support & Exploitation</span>
                 </article>
-                <article class="box glass-panel">
-                    <h3>Support & Exploitation</h3>
-                    <p>Gestion d'incidents, ticketing (GLPI), maintenance, déploiement de postes et Active Directory.</p>
+
+                <article class="box glass-panel skill-card" data-category="support">
+                    <h3>Masterisation & Déploiement de postes</h3>
+                    <p>Préparation, configuration standardisée, intégration au domaine et mise en service des postes de travail.</p>
+                    <span class="tag">Support & Exploitation</span>
                 </article>
+
+                <article class="box glass-panel skill-card" data-category="support">
+                    <h3>Inventaire & Gestion de parc</h3>
+                    <p>Recensement des équipements numériques, suivi du matériel et maintenance préventive du parc informatique.</p>
+                    <span class="tag">Support & Exploitation</span>
+                </article>
+
+                <!-- RÉSEAUX & SÉCURITÉ -->
+                <article class="box glass-panel skill-card" data-category="reseaux">
+                    <h3>Architecture TCP/IP & Plan d'adressage</h3>
+                    <p>Conception de plans d'adressage IP, découpage en sous-réseaux et diagnostic de connectivité réseau.</p>
+                    <span class="tag">Réseaux & Sécurité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="reseaux">
+                    <h3>Services réseau DHCP & DNS</h3>
+                    <p>Déploiement et configuration de l'attribution dynamique d'adresses IP et de la résolution de noms interne.</p>
+                    <span class="tag">Réseaux & Sécurité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="reseaux">
+                    <h3>Segmentation VLAN & Wi-Fi</h3>
+                    <p>Cloisonnement logique du réseau local par VLAN, configuration de commutateurs et déploiement d'accès Wi-Fi.</p>
+                    <span class="tag">Réseaux & Sécurité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="reseaux">
+                    <h3>Brassage physique & Sécurisation</h3>
+                    <p>Manipulation de baie de brassage, réalisation de schémas réseau, filtrage des flux et accès distants sécurisés.</p>
+                    <span class="tag">Réseaux & Sécurité</span>
+                </article>
+
+                <!-- SYSTÈMES & CONTINUITÉ -->
+                <article class="box glass-panel skill-card" data-category="systemes">
+                    <h3>Administration Windows Server</h3>
+                    <p>Installation, configuration des rôles essentiels et administration courante de serveurs sous Windows Server.</p>
+                    <span class="tag">Systèmes & Continuité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="systemes">
+                    <h3>Administration GNU/Linux</h3>
+                    <p>Exploitation en ligne de commande, gestion des services, des paquets et des permissions sous Linux.</p>
+                    <span class="tag">Systèmes & Continuité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="systemes">
+                    <h3>Virtualisation & Haute Disponibilité</h3>
+                    <p>Déploiement d'environnements virtualisés et mise en place de mécanismes de continuité de service.</p>
+                    <span class="tag">Systèmes & Continuité</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="systemes">
+                    <h3>Sauvegardes NAS & Supervision</h3>
+                    <p>Configuration de stratégies de sauvegarde sur NAS et supervision de l'état de santé des serveurs et services.</p>
+                    <span class="tag">Systèmes & Continuité</span>
+                </article>
+
+                <!-- POSTES, IDENTITÉS & OUTILS -->
+                <article class="box glass-panel skill-card" data-category="identites">
+                    <h3>Active Directory & Habilitations</h3>
+                    <p>Gestion des comptes utilisateurs, groupes, unités d'organisation (OU), GPO et contrôle des niveaux d'accès.</p>
+                    <span class="tag">Postes & Identités</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="identites">
+                    <h3>Environnements Windows, macOS & Linux</h3>
+                    <p>Installation, paramétrage et support utilisateur sur les trois principaux systèmes d'exploitation clients.</p>
+                    <span class="tag">Postes & Identités</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="identites">
+                    <h3>Microsoft 365 & Google Workspace</h3>
+                    <p>Administration des comptes, messageries et espaces collaboratifs cloud pour les utilisateurs de l'organisation.</p>
+                    <span class="tag">Postes & Identités</span>
+                </article>
+
+                <!-- AUTOMATISATION & IAC -->
+                <article class="box glass-panel skill-card" data-category="automatisation">
+                    <h3>Scripting PowerShell & Bash</h3>
+                    <p>Écriture de scripts d'administration pour automatiser les tâches répétitives sous Windows et Linux.</p>
+                    <span class="tag">Automatisation & IaC</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="automatisation">
+                    <h3>Infrastructure as Code (Terraform & Ansible)</h3>
+                    <p>Initiation et veille active sur le provisionnement d'infrastructures et la gestion de configuration déclarative.</p>
+                    <span class="tag">Automatisation & IaC</span>
+                </article>
+
+                <article class="box glass-panel skill-card" data-category="automatisation">
+                    <h3>Versionnement Git & GitHub</h3>
+                    <p>Suivi des versions de scripts et projets web, organisation de dépôts et documentation technique sur GitHub.</p>
+                    <span class="tag">Automatisation & IaC</span>
+                </article>
+
             </div>
         </section>
 
         <!-- STAGES -->
         <section id="stages">
-            <h2>Stages</h2>
+            <h2>Expérience</h2>
             <article id="exp1" class="glass-panel exp-card">
                 <div class="exp-header">
                     <p class="exp-entreprise">S&G Beuzelin <span>— Goussainville (95)</span></p>
                     <p class="exp-date"><time datetime="2026-06">Juin 2026</time></p>
                 </div>
-                <p class="exp-poste">Technicien support, systèmes et réseaux</p>
+                <p class="exp-poste">Technicien support de proximité, systèmes et réseaux</p>
                 <ul>
                     <li>Installation, dépannage et configuration de postes de travail.</li>
-                    <li>Configuration de sauvegardes sur NAS et interventions sur serveurs.</li>
-                    <li>Manipulation d'infrastructures physiques (baie de brassage, schéma réseau).</li>
+                    <li>Diagnostic d'incidents et maintenance de proximité.</li>
+                    <li>Configuration de sauvegardes sur NAS et interventions sur le serveur d'entreprise.</li>
+                    <li>Manipulation d'une baie de brassage et réalisation d'un schéma du réseau de l'entreprise.</li>
                 </ul>
             </article>
         </section>
@@ -268,8 +449,8 @@
 
         <!-- CONTACT -->
         <section id="contact" style="text-align: center; max-width: 600px;">
-            <h2>Démarrons un projet.</h2>
-            <p style="margin-bottom: 2rem;">À la recherche d'une alternance ou d'opportunités d'infrastructures cloud et réseaux.</p>
+            <h2>Contact</h2>
+            <p style="margin-bottom: 2rem;"></p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="mailto:mamariledouardpro@outlook.fr" class="button-primary">mamariledouardpro@outlook.fr</a>
                 <a href="https://www.linkedin.com/in/edouard-m-375b613b0" target="_blank" class="button-outline">LinkedIn</a>

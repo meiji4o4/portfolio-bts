@@ -217,8 +217,6 @@ function afficherArticles(animer) {
     if (liste.length === 0) {
         const vide = document.createElement('p');
         vide.className = 'no-result';
-        vide.style.textAlign = 'center';
-        vide.style.width = '100%';
         vide.textContent = 'Aucun article ne correspond à votre recherche.';
         artContainerV.appendChild(vide);
         return;
@@ -270,7 +268,70 @@ if (srchVeille) {
 afficherArticles(false);
 
 // ============================================================
-// PROJETS : recherche + tri
+// COMPÉTENCES : recherche instantanée + filtre par catégorie
+// ============================================================
+(function initCompetences() {
+    const conteneur = document.getElementById('container-competences');
+    const champ = document.getElementById('srchbar-competences');
+    const boutons = Array.from(document.querySelectorAll('#skills-filters .filter-pill'));
+    const compteur = document.getElementById('skills-count');
+    if (!conteneur || boutons.length === 0) return;
+
+    const cartes = Array.from(conteneur.querySelectorAll('.skill-card'));
+    let categorieActive = 'all';
+
+    const vide = document.createElement('p');
+    vide.className = 'no-result';
+    vide.textContent = 'Aucune compétence ne correspond à votre recherche.';
+    vide.hidden = true;
+    conteneur.appendChild(vide);
+
+    function filtrerCompetences() {
+        const q = normaliser(champ ? champ.value.trim() : '');
+        let nbVisibles = 0;
+
+        cartes.forEach(carte => {
+            const cat = carte.dataset.category || '';
+            const matchCat = categorieActive === 'all' || cat === categorieActive;
+            const matchTexte = normaliser(carte.textContent).includes(q);
+            const visible = matchCat && matchTexte;
+
+            carte.hidden = !visible;
+            if (visible) nbVisibles++;
+        });
+
+        vide.hidden = nbVisibles > 0;
+        if (compteur) {
+            compteur.textContent = nbVisibles > 1
+                ? `${nbVisibles} compétences`
+                : `${nbVisibles} compétence`;
+        }
+    }
+
+    boutons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            categorieActive = btn.dataset.cat || 'all';
+            boutons.forEach(b => {
+                const actif = b === btn;
+                b.classList.toggle('is-active', actif);
+                b.setAttribute('aria-pressed', String(actif));
+            });
+            filtrerCompetences();
+        });
+    });
+
+    if (champ) {
+        champ.addEventListener('input', filtrerCompetences);
+        champ.addEventListener('keydown', e => {
+            if (e.key === 'Enter') e.preventDefault();
+        });
+    }
+
+    filtrerCompetences();
+})();
+
+// ============================================================
+// RÉALISATIONS / PROJETS : recherche + tri
 // ============================================================
 (function initProjets() {
     const conteneur = document.getElementById('art_container-projets');
@@ -285,9 +346,7 @@ afficherArticles(false);
 
     const vide = document.createElement('p');
     vide.className = 'no-result';
-    vide.style.textAlign = 'center';
-    vide.style.width = '100%';
-    vide.textContent = 'Aucun projet ne correspond à votre recherche.';
+    vide.textContent = 'Aucune réalisation ne correspond à votre recherche.';
     vide.hidden = true;
     conteneur.appendChild(vide);
 
@@ -385,7 +444,7 @@ window.addEventListener('load', () => {
         start: 'top 85%',
         onEnter: batch => gsap.from(batch, {
             opacity: 0, y: 50, duration: 0.8, ease: 'power3.out',
-            stagger: 0.15, clearProps: 'all'
+            stagger: 0.1, clearProps: 'all'
         }),
         once: true
     });
@@ -399,7 +458,7 @@ window.addEventListener('load', () => {
         once: true
     });
 
-    document.querySelectorAll('.veille-intro, .filtre, .articles-list').forEach(el => {
+    document.querySelectorAll('.competences-doc-box, .skills-controls, .veille-intro, .filtre, .articles-list').forEach(el => {
         gsap.from(el, {
             opacity: 0, y: 30, duration: 0.8, ease: 'power3.out',
             scrollTrigger: { trigger: el, start: 'top 90%', once: true },
